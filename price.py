@@ -2,18 +2,11 @@ from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
-from time import sleep
-from datetime import date
-import datetime
 import requests
 import os
+import goods
 
-goods = {
-    '罗技无线鼠标':'100004546721',
-    'NAS':'100014187286',
-    'iPhone':'100038004359'
-}
-
+goods = goods.set()
 
 chromedriver = ChromeDriverManager().install()
 chrome_options = webdriver.ChromeOptions()
